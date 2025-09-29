@@ -55,6 +55,7 @@ Import `schema.sql` or `sample_data.sql` into MySQL.
 **Open in your browser:**
 1. 👉 http://localhost:8000
 
+---
 
 ## 📂 Project Structure  
 │── app/                → Laravel application core  
@@ -67,6 +68,16 @@ Import `schema.sql` or `sample_data.sql` into MySQL.
 
 
 ## 👨‍💻 Author
+- [MuhammadYusuf Akramov](https://github.com/Yusufxon790)  
+- 📧 Email: akramovyusufxon590@gmail.com  
+
+---
+
+## 📝 License
+This project is for **educational purposes**.  
+Feel free to use, modify, or improve it.  
+
+---
 
 ## 📝 Notes
 • Do not use `php artisan migrate` for this project.  
