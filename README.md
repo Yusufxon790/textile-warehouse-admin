@@ -33,24 +33,52 @@ You have two options inside the `database/` folder:
    - Use `sample_data.sql` if you want example records for testing.  
 3. Configure your `.env` file with database credentials:  
 
-```env
-DB_DATABASE=laravel_end
-DB_USERNAME=root
-DB_PASSWORD=
+---
+
+## 📝 Environment Setup
+This project uses a `.env` file to store environment variables for database and application configuration.  
+A sample file .env.example is provided.   
+### 1️⃣ Create your `.env` file  
+Copy `.env.example` to `.env`:
+
 ```
+cp .env.example .env
+```
+
+### 2️⃣ Configure your database  
+Open `.env` and set your database credentials:   
+```
+DB_CONNECTION=mysql   
+DB_HOST=127.0.0.1  
+DB_PORT=3306  
+DB_DATABASE=textile_db   # change this to your database name  
+DB_USERNAME=root         # your MySQL username  
+DB_PASSWORD=             # your MySQL password  
+```
+### 3️⃣ Generate the application key  
+Laravel requires an application key. Run:  
+
+```
+php artisan key:generate
+```  
+This will set the APP_KEY in your `.env` file automatically.  
 
 ---
 
 ## ⚙️ How to Run Locally
 **Clone the repository:**  
+```
 1. composer install  
 2. npm install && npm run dev
+```
 
 Configure `.env` (copy from `.env.example`).
 Import `schema.sql` or `sample_data.sql` into MySQL.
 
 **Start Laravel Server**
-1. php artisan serve
+```
+php artisan serve
+```
 
 **Open in your browser:**
 1. 👉 http://localhost:8000
@@ -58,13 +86,15 @@ Import `schema.sql` or `sample_data.sql` into MySQL.
 ---
 
 ## 📂 Project Structure  
+```
 │── app/                → Laravel application core  
 │── public/             → Public assets  
 │── resources/          → Blade templates (views)  
 │── routes/             → Web routes  
 │── database/schema.sql → Database schema (only tables & relationships)  
 │── database/sample_data.sql → Database with example/sample records  
-│── README.md           → Documentation  
+│── README.md           → Documentation
+```
 
 
 ## 👨‍💻 Author
