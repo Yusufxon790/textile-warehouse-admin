@@ -1,0 +1,39 @@
+* text=auto eol=lf
+
+# Language stats optimizations
+*.blade.php linguist-language=PHP
+/public/* linguist-vendored
+/resources/js/* linguist-vendored
+/resources/css/* linguist-vendored
+/resources/sass/* linguist-vendored
+/vendor/* linguist-vendored
+/node_modules/* linguist-vendored
+*.json linguist-vendored
+*.lock linguist-vendored
+*.yml linguist-vendored
+*.yaml linguist-vendored
+
+# Diff settings
+*.blade.php diff=html
+*.css diff=css
+*.html diff=html
+*.md diff=markdown
+*.php diff=php
+*.json diff=json
+*.yml diff=yaml
+*.yaml diff=yaml
+
+# Merge rules
+.env merge=ours
+
+# Export ignore
+/.github export-ignore
+CHANGELOG.md export-ignore
+/node_modules export-ignore
+/vendor export-ignore
+/storage export-ignore
+/bootstrap/cache export-ignore
+
+# Lock files no diff
+composer.lock -diff
+package-lock.json -diff
