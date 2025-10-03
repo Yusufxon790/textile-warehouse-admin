@@ -24,3 +24,9 @@ CHANGELOG.md export-ignore
 /vendor export-ignore
 /storage export-ignore
 /bootstrap/cache export-ignore
+
+*.css linguist-detectable=false
+*.js linguist-detectable=false
+/public/assets/* linguist-detectable=false
+
+*.sql linguist-detectable=true
