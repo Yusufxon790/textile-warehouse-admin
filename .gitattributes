@@ -13,3 +13,10 @@
 *.lock linguist-detectable=false
 *.yml linguist-detectable=false
 *.yaml linguist-detectable=false
+
+# Ignore SCSS and LESS from language stats
+*.scss linguist-detectable=false
+*.less linguist-detectable=false
+/resources/sass/** linguist-detectable=false
+/resources/scss/** linguist-detectable=false
+/resources/less/** linguist-detectable=false
