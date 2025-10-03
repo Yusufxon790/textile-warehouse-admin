@@ -1,32 +1,15 @@
-* text=auto eol=lf
-
-# Force Blade templates to count as PHP
+# Count only PHP (including Blade)
+*.php linguist-detectable=true
 *.blade.php linguist-language=PHP
 
-# Ignore vendor and frontend assets in language stats
-/vendor/* linguist-vendored
-/node_modules/* linguist-vendored
-/public/* linguist-vendored
-/resources/js/* linguist-vendored
-/resources/css/* linguist-vendored
-/resources/sass/* linguist-vendored
+# Ignore vendor, node_modules, public assets, and resources
+/vendor/** linguist-detectable=false
+/node_modules/** linguist-detectable=false
+/public/** linguist-detectable=false
+/resources/** linguist-detectable=false
 
-# Ignore configs and lock files
-*.json linguist-vendored
-*.lock linguist-vendored
-*.yml linguist-vendored
-*.yaml linguist-vendored
-
-# Export-ignore (repo size clean)
-CHANGELOG.md export-ignore
-/.github export-ignore
-/node_modules export-ignore
-/vendor export-ignore
-/storage export-ignore
-/bootstrap/cache export-ignore
-
-*.css linguist-detectable=false
-*.js linguist-detectable=false
-/public/assets/* linguist-detectable=false
-
-*.sql linguist-detectable=true
+# Ignore config/lock files
+*.json linguist-detectable=false
+*.lock linguist-detectable=false
+*.yml linguist-detectable=false
+*.yaml linguist-detectable=false
